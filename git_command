@@ -1,0 +1,32 @@
+#check existing branch:
+ $ git branch
+
+#change the branch
+ $ git checkout <branch name>
+
+#git clone (download the repo from github into local)
+ $ git clone <git https code link>
+
+# change push(upload)
+ $ git add .
+ $ git commit -m "user comment"
+ $ git push
+
+# update the repo file
+ $ git pull origin <branch name>
+
+# got back to previous pull(roll back)
+ $ git stash
+
+# create branch
+ create from UI
+ $ git branch <new_branch name>
+ $ git checkout -b <new_branch name>
+ 
+
+# branch merging
+# version roll back
+# pull request
+# branch merge conflict
+
+
