@@ -94,4 +94,314 @@ create sh (ssh -keygen) -> 5
 copy  /home/ubuntu /.ssh /id_rsa.pub
 
 goto github ->
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.15.0-1028-aws x86_64)
 
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sat Feb  4 13:37:19 UTC 2023
+
+  System load:  0.64404296875     Processes:             102
+  Usage of /:   19.7% of 7.57GB   Users logged in:       0
+  Memory usage: 21%               IPv4 address for eth0: 172.31.14.206
+  Swap usage:   0%
+
+0 updates can be applied immediately.
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+ubuntu@ip-172-31-14-206:~$ sudo i
+sudo: i: command not found
+ubuntu@ip-172-31-14-206:~$ sudo -i
+root@ip-172-31-14-206:~# exit
+logout
+ubuntu@ip-172-31-14-206:~$ git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+ubuntu@ip-172-31-14-206:~$ sudo apt upgrade -y git
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+git is already the newest version (1:2.34.1-1ubuntu1.5).
+git set to manually installed.
+Calculating upgrade... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+ubuntu@ip-172-31-14-206:~$ ^C
+ubuntu@ip-172-31-14-206:~$ mkdir git 
+ubuntu@ip-172-31-14-206:~$ ^C
+ubuntu@ip-172-31-14-206:~$ cd git
+ubuntu@ip-172-31-14-206:~/git$ git clone git@gitlab.com:shiva_devops/devops_01.git
+Cloning into 'devops_01'...
+The authenticity of host 'gitlab.com (172.65.251.78)' can't be established.
+ED25519 key fingerprint is SHA256:eUXGGm1YGsMAS7vkcx6JOJdOGHPem5gQp4taiCfCLB8.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'gitlab.com' (ED25519) to the list of known hosts.
+git@gitlab.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+ubuntu@ip-172-31-14-206:~/git$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/ubuntu/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/ubuntu/.ssh/id_rsa
+Your public key has been saved in /home/ubuntu/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:CDKxgg7m23UvbqdFTBWpCeH2FyucQknsYH/RVsE4Md0 ubuntu@ip-172-31-14-206
+The key's randomart image is:
++---[RSA 3072]----+
+|  .   .o. .=Ooo  |
+|.  o ooo...*.o E |
+|+.+ o +=..=..    |
+|=. o .o+=+. o    |
+| o   ..oSB o     |
+|  o . . + o      |
+| . .   . o       |
+|      ..o.       |
+|      .oo        |
++----[SHA256]-----+
+ubuntu@ip-172-31-14-206:~/git$ ^C
+ubuntu@ip-172-31-14-206:~/git$ cat /home/ubuntu/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDWpC0kIFt2w2iMBZ5VVFsauZQquJ1D0aNdUH6+gfX6KB7iS3QPmeP21hNKjRSerqoCoWSSonlfZlPa6/W4dd/TMjykQKEFlSkFJvn/++5VmCgq6aJPTk7rL/2MHaWL5zMA/zQZPE/1y9GQVLXFODoUjO4oGy3w6MhU8GkdlLzT1QEY4aTZkx1UbB3fyCFFacXzVLUvHVrmkwWGOcFnL/AVtiMGTuQ3GJENuQy9arkulw6JpviKmJrzuAztTZN9yyyWtiy4knHDulkUaUIKCcTK9dHsLSqdLivZbzzhrQJlA8ez1hKbHjOCfBxgcw57Msu9TRlify7GAEHDbUSXDnvh6/7PQQlgzsJvLVtmaMsO+JOiHcbkWhPuZr+Xb73uPLHVz5fZBptBSWOvhEXkwqmC+wXvobXNk6LQDD+IeOBzjB/+9dl1KedDS9Maqj0gKiZ8mul/1RJWntw77KgLcuTKbl5MUq9d9LcjckHOT8reqfqgYbmZ5nUGZfXpMjfFOZ8= ubuntu@ip-172-31-14-206
+ubuntu@ip-172-31-14-206:~/git$ git clone git@gitlab.com:shiva_devops/devops_01.git
+Cloning into 'devops_01'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+ubuntu@ip-172-31-14-206:~/git$ git config --list
+ubuntu@ip-172-31-14-206:~/git$ git config --list
+ubuntu@ip-172-31-14-206:~/git$ ls 
+devops_01
+ubuntu@ip-172-31-14-206:~/git$ cd devops_01
+ubuntu@ip-172-31-14-206:~/git/devops_01$ git config --list
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=git@gitlab.com:shiva_devops/devops_01.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.main.remote=origin
+branch.main.merge=refs/heads/main
+ubuntu@ip-172-31-14-206:~/git/devops_01$ git config --global user.name "Shiva"
+ubuntu@ip-172-31-14-206:~/git/devops_01$ git config --global user.email "Shivashankar071997@gmail.com"
+ubuntu@ip-172-31-14-206:~/git/devops_01$ git config --list
+user.name=Shiva
+user.email=Shivashankar071997@gmail.com
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=git@gitlab.com:shiva_devops/devops_01.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.main.remote=origin
+branch.main.merge=refs/heads/main
+ubuntu@ip-172-31-14-206:~/git/devops_01$ vi README.md
+ubuntu@ip-172-31-14-206:~/git/devops_01$ git status 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ubuntu@ip-172-31-14-206:~/git/devops_01$ git add .
+ubuntu@ip-172-31-14-206:~/git/devops_01$ git status 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+ubuntu@ip-172-31-14-206:~/git/devops_01$ git commit -m "updated the file"
+[main bdc3f69] updated the file
+ 1 file changed, 2 insertions(+)
+ubuntu@ip-172-31-14-206:~/git/devops_01$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 303 bytes | 303.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+To gitlab.com:shiva_devops/devops_01.git
+   1418a2c..bdc3f69  main -> main
+ubuntu@ip-172-31-14-206:~/git/devops_01$ cd ..
+ubuntu@ip-172-31-14-206:~/git$ mkdir devops_02
+ubuntu@ip-172-31-14-206:~/git$ cd devops_02
+ubuntu@ip-172-31-14-206:~/git/devops_02$ touch a b c d
+ubuntu@ip-172-31-14-206:~/git/devops_02$ git init --initial-branch=main
+Initialized empty Git repository in /home/ubuntu/git/devops_02/.git/
+ubuntu@ip-172-31-14-206:~/git/devops_02$ ls -a
+.  ..  .git  a  b  c  d
+ubuntu@ip-172-31-14-206:~/git/devops_02$ ls 
+a  b  c  d
+ubuntu@ip-172-31-14-206:~/git/devops_02$ git remote -v
+ubuntu@ip-172-31-14-206:~/git/devops_02$ git remote add origin git@gitlab.com:shiva_devops/devops_02.git
+ubuntu@ip-172-31-14-206:~/git/devops_02$ git remote -v
+origin  git@gitlab.com:shiva_devops/devops_02.git (fetch)
+origin  git@gitlab.com:shiva_devops/devops_02.git (push)
+ubuntu@ip-172-31-14-206:~/git/devops_02$ git add .
+ubuntu@ip-172-31-14-206:~/git/devops_02$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   a
+        new file:   b
+        new file:   c
+        new file:   d
+
+ubuntu@ip-172-31-14-206:~/git/devops_02$ git commit -m "new files "
+[main (root-commit) 08e6e32] new files
+ 4 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a
+ create mode 100644 b
+ create mode 100644 c
+ create mode 100644 d
+ubuntu@ip-172-31-14-206:~/git/devops_02$ git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 217 bytes | 217.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To gitlab.com:shiva_devops/devops_02.git
+ * [new branch]      main -> main
+ubuntu@ip-172-31-14-206:~/git/devops_02$ vi a
+ubuntu@ip-172-31-14-206:~/git/devops_02$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   a
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ubuntu@ip-172-31-14-206:~/git/devops_02$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+ubuntu@ip-172-31-14-206:~/git/devops_02$ git add .
+ubuntu@ip-172-31-14-206:~/git/devops_02$ git commit -m "welcome message"
+[main 5d2dbac] welcome message
+ 1 file changed, 1 insertion(+)
+ubuntu@ip-172-31-14-206:~/git/devops_02$ git push
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main
+
+ubuntu@ip-172-31-14-206:~/git/devops_02$ git push orgin main
+fatal: 'orgin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+ubuntu@ip-172-31-14-206:~/git/devops_02$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 296 bytes | 296.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To gitlab.com:shiva_devops/devops_02.git
+   08e6e32..5d2dbac  main -> main
+ubuntu@ip-172-31-14-206:~/git/devops_02$ ^C
+ubuntu@ip-172-31-14-206:~/git/devops_02$ vi b
+ubuntu@ip-172-31-14-206:~/git/devops_02$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   b
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ubuntu@ip-172-31-14-206:~/git/devops_02$ git add b
+ubuntu@ip-172-31-14-206:~/git/devops_02$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   b
+
+ubuntu@ip-172-31-14-206:~/git/devops_02$ git commit -m "file b edited"
+[main 99603f3] file b edited
+ 1 file changed, 2 insertions(+)
+ubuntu@ip-172-31-14-206:~/git/devops_02$ git push main
+fatal: 'main' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+ubuntu@ip-172-31-14-206:~/git/devops_02$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 327 bytes | 327.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To gitlab.com:shiva_devops/devops_02.git
+   5d2dbac..99603f3  main -> main
+ubuntu@ip-172-31-14-206:~/git/devops_02$ 
