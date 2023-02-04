@@ -1,3 +1,6 @@
+shivashankar071997@gmail.com
+Shiva@0797
+
 #check existing branch:
  $ git branch
 
@@ -40,4 +43,55 @@ git push origin bn
 git init
 git remote -v
 git remote origin add 
+
+
+
+
+---------------------------------------------------------------------------
+git touch 1 2 3 to create file 
+when the staus will be modified 
+git add will add all the untracked file into the git
+
+ex- git add. will add all untracked file 
+git add 1 individual
+
+
+git commit -m new "new files "
+git rm filename is going to remove the file name
+git mv 3 33 ur renaming a file from 3 to 33 
+-----------to commit the changes -----
+git add .
+git commit -m "new file"
+git push origin "filename"
+
+
+---------------------------------------------------
+git log -what all the changes we have done in our history here we will have unique commit id 
+here contain- git id ,git message ,git time
+
+git show commitid  
+
+------to take changes from the gitlab
+git pull origin main
+
+
+-----vi l---to add content to the file 
+ 
+git reset --hard all the changes that are modified are reverted
+it will go to last pull 
+
+
+----------------------
+git checkout filename is to revert back the changes to the specific file 
+------------------
+
+
+git diff
+---------------------------
+action items 
+aws account -ec2 instance - 
+create sh (ssh -keygen) -> 5 
+copy  /home/ubuntu /.ssh /id_rsa.pub
+
+goto github ->
 
