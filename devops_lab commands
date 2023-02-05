@@ -1,0 +1,136 @@
+sudo i
+    2  sudo -i
+    3  git
+    4  sudo apt upgrade -y git
+    5  mkdir git 
+    6  cd git
+    7  git clone git@gitlab.com:shiva_devops/devops_01.git
+    8  ssh-keygen
+    9  cat /home/ubuntu/.ssh/id_rsa.pub
+   10  git clone git@gitlab.com:shiva_devops/devops_01.git
+   11  git config --list
+   12  ls 
+   13  cd devops_01
+   14  git config --list
+   15  git config --global user.name "Shiva"
+   16  git config --global user.email "Shivashankar071997@gmail.com"
+   17  git config --list
+   18  vi README.md
+   19  git status 
+   20  git add .
+   21  git status 
+   22  git commit -m "updated the file"
+   23  git push origin main
+   24  cd ..
+   25  mkdir devops_02
+   26  cd devops_02
+   27  touch a b c d
+   28  git init --initial-branch=main
+   29  ls -a
+   30  ls 
+   31  git remote -v
+   32  git remote add origin git@gitlab.com:shiva_devops/devops_02.git
+   33  git remote -v
+   34  git add .
+   35  git status
+   36  git commit -m "new files "
+   37  git push origin main
+   38  vi a
+   39  git status
+   40  git add.
+   41  git add .
+   42  git commit -m "welcome message"
+   43  git push
+   44  git push orgin main
+   45  git push origin main
+   46  vi b
+   47  git status
+   48  git add b
+   49  git status
+   50  git commit -m "file b edited"
+   51  git push main
+   52  git push origin main
+   53  sudo -i
+   54  mkdir
+   55  git
+   56  ls
+   57  cd git
+   58  git clone https://github.com/shankar0797/devops_git.git
+   59  ls
+   60  cd devops_01/ ls
+   61  cd devops_01/
+   62  ls
+   63  cd devops_git
+   64  cs ..
+   65  cd ..
+   66  cd devops_git
+   67  ls
+   68  vi git_command
+   69  git checkout devops_git
+   70  cd ..
+   71  git checkout devops_git
+   72  git checkout main
+   73  git checkout origin main
+   74  ls
+   75  cd git 
+   76  ls
+   77  cd devops_02
+   78  ls
+   79  git status
+   80  cd ..
+   81  cd devops_02
+   82  git tag --list
+   83  git log
+   84  git tag -a "release-05-02-2023" -m "this is the release for 2023"
+   85  git tag --list
+   86  git push origin release-05-02-2023
+   87  git tag -a "release-05-02-2023-V2" -m "this is the version 2"
+   88  git push origin release-05-02-2023-V2
+   89  git tag -d release-05-02-2023-V2
+   90  git tag --list 
+   91  git push origin :release-05-02-2023-V2
+   92  git show tag release-05-02-2023
+   93  git show release-05-02-2023
+   94  cd ..
+   95  ls
+   96  mkdir brach_demo
+   97  mkdir branch_demo
+   98  rm brach_demo
+   99  rm-rf brach_demo
+  100  rm -rf brach_demo
+  101  ls
+  102  cd branch_demo
+  103  git clone git@gitlab.com:shiva_devops/devops_02.git
+  104  ls 
+  105  cd devops_02
+  106  ls
+  107  history
+  108  git remove -v
+  109  git remote -v
+  110  git check -b shiva_devops 
+  111  git checkout -b shiva_devops 
+  112  git branch 
+  113  git checkout -b gopal_devops 
+  114  git checkout -b shiva_devops 
+  115  git status 
+  116  touch shiva
+  117  vi shiva
+  118  git status
+  119  git add .
+  120  git commit -m "shiva code push"
+  121  git push origin shiva_devops
+  122  git branch 
+  123  git checkout main
+  124  ls
+  125  git branch
+  126  git checkout shiva_devops
+  127  ls
+  128  touch 
+  129  touch shiva
+  130  vi shiva
+  131  git status
+  132  git add .
+  133  git status
+  134  git commit -m "new edit "
+  135  git push origin shiva_devops
+  136  history 
